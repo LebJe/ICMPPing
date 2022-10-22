@@ -1,0 +1,20 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+    - repo: "https://github.com/hodovani/pre-commit-swift"
+      rev: "0551a937b9f98a839fd98d2c3e6ce0b6c0a1e093"
+      hooks:
+          - id: "swift-format"
+            name: "Format Swift"
+    - repo: "https://github.com/pre-commit/mirrors-prettier"
+      rev: "v2.6.1"
+      hooks:
+          - id: "prettier"
+            name: "Format YAML & Markdown"
+            tags: ["md"]
+            exclude: "Sources/ICMPPing/ICMPPing.docc/"
+    - repo: "https://github.com/doublify/pre-commit-clang-format"
+      rev: "62302476d0da01515660132d76902359bed0f782"
+      hooks:
+          - id: "clang-format"
+            exclude: "Sources/ICMPLib/Sources/icmplib.h"

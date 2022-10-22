@@ -1,0 +1,4 @@
+module ICMPLib {
+	header "ICMPLib.h"
+	export *
+}
