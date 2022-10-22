@@ -29,7 +29,7 @@ let package = Package(
 		),
 	],
 	cLanguageStandard: .c99,
-	cxxLanguageStandard: .cxx11
+	cxxLanguageStandard: .cxx14
 )
 
 #if swift(>=5.6) && !os(Windows)

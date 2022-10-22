@@ -20,25 +20,25 @@ jobs:
               id: "cache-docc"
               uses: "actions/cache@v2"
               with:
-                  key: "TOMLKit-docc-build"
+                  key: "ICMPPing-docc-build"
                   path: "swift-docc/.build"
             - name: "Build swift-docc"
               if: "${{ !steps.cache-docc.outputs.cache-hit }}"
               run: "swift build --product docc --package-path swift-docc -c release"
-            - name: "Build TOMLKit"
-              run: "swift build --target TOMLKit -Xswiftc -emit-symbol-graph -Xswiftc -emit-symbol-graph-dir -Xswiftc .build"
+            - name: "Build ICMPPing"
+              run: "swift build --target ICMPPing -Xswiftc -emit-symbol-graph -Xswiftc -emit-symbol-graph-dir -Xswiftc .build"
             - name: "Build documentation"
               run: |
                   export DOCC_HTML_DIR=swift-docc-render/dist
                   ./swift-docc/.build/release/docc convert \
-                  Sources/TOMLKit/TOMLKit.docc \
-                  --fallback-display-name TOMLKit \
-                  --fallback-bundle-identifier com.LebJe.TOMKit \
+                  Sources/ICMPPing/ICMPPing.docc \
+                  --fallback-display-name ICMPPing \
+                  --fallback-bundle-identifier com.LebJe.ICMPPing \
                   --fallback-bundle-version 1 \
                   --additional-symbol-graph-dir .build \
                   --enable-inherited-docs \
                   --output-dir docs
-                  ./swift-docc/.build/release/docc process-archive transform-for-static-hosting docs --hosting-base-path /TOMLKit
+                  ./swift-docc/.build/release/docc process-archive transform-for-static-hosting docs --hosting-base-path /ICMPPing
             - name: "Deploy to GitHub Pages"
               uses: "peaceiris/actions-gh-pages@v3"
               with:
