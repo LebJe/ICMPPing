@@ -16,7 +16,7 @@
 Add this to the `dependencies` array in `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/LebJe/ICMPPing.git", from: "0.5.0")
+.package(url: "https://github.com/LebJe/ICMPPing.git", from: "0.0.1")
 ```
 
 Also add this to the `targets` array in the aforementioned file:
