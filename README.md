@@ -1,6 +1,6 @@
 # ICMPPing
 
-**Send [ICMP] Ping requests in Swift! Powered by [cpp-icmplib](https://github.com/markondej/cpp-icmplib).**
+**Send [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) Ping requests in Swift! Powered by [cpp-icmplib](https://github.com/markondej/cpp-icmplib).**
 
 [![Swift 5.5](https://img.shields.io/badge/Swift-5.5-brightgreen?logo=swift)](https://swift.org)
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
@@ -8,6 +8,21 @@
 [![Build and Test](https://github.com/LebJe/ICMPPing/workflows/Build%20and%20Test/badge.svg)](https://github.com/LebJe/ICMPPing/actions?query=workflow%3A%22Build+and+Test%22)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FLebJe%2FICMPPing%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/LebJe/ICMPPing)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FLebJe%2FICMPPing%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/LebJe/ICMPPing)
+
+<!--ts-->
+
+-   [ICMPPing](#icmpping)
+    -   [Installation](#installation)
+        -   [Swift Package Manager](#swift-package-manager)
+        -   [Full Documentation](#full-documentation)
+    -   [Quick Start](#quick-start)
+    -   [Dependencies](#dependencies)
+    -   [Licenses](#licenses)
+    -   [Contributing](#contributing)
+
+<!-- Added by: lebje, at: Sun Oct 23 21:44:53 EDT 2022 -->
+
+<!--te-->
 
 ## Installation
 
