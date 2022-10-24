@@ -18,7 +18,7 @@ extern "C" {
 	struct CIPAddress;
 	typedef struct CIPAddress CIPAddress;
 
-	enum CIPAddressType { IPv4, IPv6, Unknown } __attribute__((enum_extensibility(closed)));
+	enum CIPAddressType { IPv4, IPv6, IPUnknown } __attribute__((enum_extensibility(closed)));
 
 	typedef enum CIPAddressType CIPAddressType;
 

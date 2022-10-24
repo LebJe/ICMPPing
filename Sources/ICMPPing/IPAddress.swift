@@ -90,7 +90,7 @@ public extension ICMPPing {
 				switch cAddressType {
 					case .IPv4: self = .ipv4
 					case .IPv6: self = .ipv6
-					case .Unknown: self = .unknown
+					case .IPUnknown: self = .unknown
 				}
 			}
 
@@ -98,7 +98,7 @@ public extension ICMPPing {
 				switch self {
 					case .ipv4: return .IPv4
 					case .ipv6: return .IPv6
-					case .unknown: return .Unknown
+					case .unknown: return .IPUnknown
 				}
 			}
 		}

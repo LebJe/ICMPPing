@@ -46,7 +46,7 @@ CIPAddressType icmpIPAddressTypeToCIPAddressType(icmplib::IPAddress::Type type) 
 			return CIPAddressType::IPv6;
 			break;
 		case icmplib::IPAddress::Type::Unknown:
-			return CIPAddressType::Unknown;
+			return CIPAddressType::IPUnknown;
 			break;
 	}
 }
@@ -59,7 +59,7 @@ icmplib::IPAddress::Type CIPAddressTypeToICMPIPAddressType(CIPAddressType type) 
 		case CIPAddressType::IPv6:
 			return icmplib::IPAddress::Type::IPv6;
 			break;
-		case CIPAddressType::Unknown:
+		case CIPAddressType::IPUnknown:
 			return icmplib::IPAddress::Type::Unknown;
 			break;
 	}
