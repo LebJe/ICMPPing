@@ -18,7 +18,12 @@ let package = Package(
 	],
 	dependencies: [],
 	targets: [
-		.target(name: "ICMPLib"),
+		.target(
+			name: "ICMPLib",
+			cxxSettings: [
+				.define("_CRT_NONSTDC_NO_WARNINGS", .when(platforms: [.windows])),
+			]
+		),
 		.target(
 			name: "ICMPPing",
 			dependencies: ["ICMPLib"]

@@ -5,13 +5,13 @@
 #ifdef __cplusplus
 
 CPingResponse icmpPingResultToCPingResponse(icmplib::PingResult pr) {
-	return CPingResponse { .responseType =
-							   icmpPingResponseTypeToCPingResultResponseType(pr.response),
-						   .code = pr.code,
-						   .interval = pr.interval,
-						   .ttl = pr.ttl,
-						   .address =
-							   reinterpret_cast<CIPAddress *>(new icmplib::IPAddress(pr.address)) };
+	return CPingResponse {
+		.address = reinterpret_cast<CIPAddress *>(new icmplib::IPAddress(pr.address)),
+		.code = pr.code,
+		.ttl = pr.ttl,
+		.interval = pr.interval,
+		.responseType = icmpPingResponseTypeToCPingResultResponseType(pr.response),
+	};
 };
 
 CPingResultResponseType
