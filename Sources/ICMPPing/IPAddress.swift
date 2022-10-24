@@ -67,7 +67,7 @@ public extension ICMPPing {
 			}
 		}
 
-		public init(_ address: UInt) {
+		public init(_ address: CUnsignedLong) {
 			self.addressPointer = ipAddressCreateLong(address)
 		}
 
