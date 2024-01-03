@@ -3,5 +3,32 @@ name: "Build and Test"
 on: ["push", "pull_request"]
 
 jobs:
-    "BuildAndTest":
-        uses: LebJe/SwiftWorkflows/.github/workflows/buildAndTest.yml@main
+    TestOnMacOS-11_0-x86_64:
+        runs-on: "macos-11"
+        steps:
+            - uses: "actions/checkout@v4"
+            - name: "Run tests"
+              run: "sudo swift test"
+    TestOnUbuntu-20_04-x86_64:
+        runs-on: "ubuntu-latest"
+        steps:
+            - uses: "actions/checkout@v4"
+            - name: "Run tests"
+              run: "sudo swift test"
+    TestOnWindows10-x86_64:
+        runs-on: "windows-latest"
+        steps:
+            - uses: "actions/checkout@v4"
+            - uses: "seanmiddleditch/gha-setup-vsdevenv@master"
+            - uses: "compnerd/gha-setup-swift@main"
+              with:
+                  branch: "swift-5.8-release"
+                  tag: "5.8-RELEASE"
+            - name: "Test"
+              run: "swift test -Xcc -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH -Xcxx -D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"
+    TestBuildingOnMacOS-11_0-ARM64:
+        runs-on: "macos-11"
+        steps:
+            - uses: "actions/checkout@v4"
+            - name: "Run tests"
+              run: "swift build --arch arm64"
