@@ -49,7 +49,7 @@ Full documentation is available [here](https://lebje.github.io/ICMPPing/document
 ```swift
 import ICMPPing
 
-// Google IP Address
+// Google's IP Address
 let address = try ICMPPing.IPAddress("8.8.8.8", type: .ipv4)
 
 let result = ICMPPing.ping(address: address, timeout: 10 /* seconds */)
